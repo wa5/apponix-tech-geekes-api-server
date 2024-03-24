@@ -20,7 +20,13 @@ app.get('/api/greeting',(req,res)=>{
 })
 
 app.get('/api/item',(req,res)=>{
-    res.send("hello samima")
+    let data={
+        img:'https://rukminim2.flixcart.com/image/612/612/k3g73bk0/keyboard/desktop-keyboard/e/y/q/dell-kb-216-original-imaf8qpmu8zmqm9f.jpeg?q=70',
+        prise:'300',
+        rating:4,
+        name:'keyboard'
+    }
+    res.send(data)
 })
 
 
