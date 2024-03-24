@@ -18,6 +18,12 @@ app.post('/api/login',(req,res)=>{
 app.get('/api/greeting',(req,res)=>{
     res.send("hello student")
 })
+
+app.get('/api/item',(req,res)=>{
+    res.send("hello samima")
+})
+
+
 app.listen(8001,()=>{
     console.log("im working on port 8001")
 })
