@@ -29,6 +29,10 @@ app.get('/api/item',(req,res)=>{
     res.send(data)
 })
 
+app.get('/api/manoj',(req,res)=>{
+    res.send("skyline group hi")
+})
+
 
 app.listen(8001,()=>{
     console.log("im working on port 8001")
