@@ -8,11 +8,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 app.post('/api/login',(req,res)=>{
-    console.log(req.params)
-    console.log(req.body)
-    console.log(req.query)
+    let data={
+        name:'vibhav',
+        email:'v@gmail.com',
+        password:'1234'
+    }
 
-    res.send({status:req.body})
+if(req.body.password==data.password & req.body.email==data.email){
+    res.send({user:'exits',data})
+}else{
+    res.send({user:'do not exits'})
+}
 })
 
 app.get('/api/greeting',(req,res)=>{
