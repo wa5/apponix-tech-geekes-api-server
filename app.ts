@@ -35,7 +35,7 @@ app.get('/api/item',(req:any,res:any)=>{
     res.send(data)
 })
 
-app.get('/api/manoj',(req:any,res:any)=>{
+app.get('/api/manojll',(req:any,res:any)=>{
     res.send("skyline group hi")
 })
 
