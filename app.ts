@@ -7,25 +7,25 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 app.use(cors())
-app.post('/api/login',(req,res)=>{
+app.post('/api/login',(req:any,res:any)=>{
     let data={
         name:'vibhav',
         email:'v@gmail.com',
         password:'1234'
     }
 
-if(req.body.password==data.password & req.body.email==data.email){
+if(req.body.password==data.password && req.body.email==data.email){
     res.send({user:'exits',data})
 }else{
     res.send({user:'do not exits'})
 }
 })
 
-app.get('/api/greeting',(req,res)=>{
+app.get('/api/greeting',(req:any,res:any)=>{
     res.send("hello student")
 })
 
-app.get('/api/item',(req,res)=>{
+app.get('/api/item',(req:any,res:any)=>{
     let data={
         img:'https://rukminim2.flixcart.com/image/612/612/k3g73bk0/keyboard/desktop-keyboard/e/y/q/dell-kb-216-original-imaf8qpmu8zmqm9f.jpeg?q=70',
         prise:'300',
@@ -35,7 +35,7 @@ app.get('/api/item',(req,res)=>{
     res.send(data)
 })
 
-app.get('/api/manoj',(req,res)=>{
+app.get('/api/manoj',(req:any,res:any)=>{
     res.send("skyline group hi")
 })
 
